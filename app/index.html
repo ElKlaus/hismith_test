@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
+	<title>Hismith</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,15 +32,15 @@
 	<header class="header">
     <div class="container">
       <div class="top-line top-line_position">
-        <div class="row">
-          <div class="col-md-auto col-sm-auto">
+        <div class="row justify-content-center">
+          <div class="col-4 col-md-auto col-sm-5">
             <div class="logo">
               <a href="#"><img src="/img/logo.png" alt="company"></a>
             </div>
           </div>
 
-          <div class="col-lg-auto d-none d-md-block">
-            <div class="nav-menu nav-menu_position">
+          <div class="col-md-auto d-none d-md-block">
+            <nav class="nav-menu nav-menu_position">
               <ul>
                 <li class="nav-menu__item"><a href="#">Раздел №1</a></li>
                 <li class="nav-menu__item"><a href="#">Раздел №2</a></li>
@@ -48,7 +48,7 @@
                 <li class="nav-menu__item"><a href="#">Раздел №4</a></li>
                 <li class="nav-menu__item"><a href="#">Раздел №5</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
 
           <div class="col-md-auto d-none d-md-block">
@@ -67,10 +67,14 @@
             </div>
           </div>
 
-          <div class="col-md-auto col-sm-auto">
+          <div class="col-6 col-md-auto col-sm-5">
             <div class="phone phone_position">
-              <a href="#" class="phone__link">+7 000 000-00-00</a>
-              <div class="fhone__icon"></div>
+              <a href="#" class="phone__link">+7 000 000-00-00<div class="fhone__icon"></div></a>              
+            </div>
+          </div>
+          <div class="col-1 col-sm-1 d-md-none">
+            <div class="top-line__mobile-menu">
+              <a href="#" class="toggle-mnu hidden-lg"><span></span></a>
             </div>
           </div>
         </div>
@@ -79,15 +83,52 @@
 
     <div class="header__title">
       <div class="header__title-img">
-        <img src="/img/header_bg.png" alt="">
+        <img src="/img/header_bg.png" alt=""  class="d-none d-md-block">
+        <img src="/img/header768_bg.png" alt="" class="d-md-none d-none d-sm-block">
+        <img src="/img/header640_bg.png" alt="" class="d-sm-none">
       </div>
       <div class="container">
         <div class="header__title-content">
           <div class="header__title-adress">Адрес 123</div>
-          <div class="header__title-object">Объект №51</div>
+          <h1 class="header__title-object">Объект №51</h1>
         </div>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <nav id="my-menu">
+      <div class="my-menu__custom">
+        <div class="logo my-menu_top-line">
+            <a href="#"><img src="/img/logo.png" alt="company"></a>
+            <div class="top-line__mobile-menu">
+              <a href="#" class="toggle-mnu hidden-lg on"><span></span></a>
+            </div>
+        </div>
+        <div class="mm-menu__nav-block">
+          <ul class="my-menu__nav-menu">
+            <li><a href="#">Раздел №1</a></li>
+            <li><a href="#">Раздел №2</a></li>
+            <li><a href="#">Раздел №3</a></li>
+            <li><a href="#">Раздел №4</a></li>
+            <li><a href="#">Раздел №5</a></li>
+          </ul>
+          <div class="compare my-menu__compare">
+            <div class="compare__icon">
+              <i class="fas fa-list"></i>
+              <span href="#" class="compare__count">3</span>
+            </div>
+            <a href="#" class="compare__linc">Сравнение</a>
+          </div>
+          <div class="personal-area my-menu__personal-area">
+            <a href="#" class="personal-area__link">Личный кабинет</a>
+          </div>
+          <div class="phone my-menu__phone">
+            <a href="#" class="phone__link">+7 000 000-00-00<div class="fhone__icon"></div></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile menu end -->
   </header>
 
 	<script src="js/scripts.min.js"></script>
