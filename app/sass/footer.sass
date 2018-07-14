@@ -53,7 +53,6 @@
       text-decoration: none
       color: darken(#893b67, 20%)
 
-
 .footer_nav
   padding-left: 45px
 
@@ -61,17 +60,33 @@
   list-style-type: none
   margin: 0
   padding: 0
-  li
-    display: inline-block
-    margin-right: 125px
-    max-width: 115px
-    &:last-child
-      margin: 0
+
+.footer__nav_list
+
+.footer__nav_item
+  display: inline-block
+  margin-right: 125px
+  max-width: 115px
+  &:last-child
+    margin: 0
+  .fas
+    display: none
 
 .nav_section__title
   font-family: vida33Pro
   font-size: 14px
   color: #000
+  &:active, &:hover, &:focus
+    color: #000
+    text-decoration: none
+    border: none
+  span
+    display: none
+    height: 10px
+    width: 17px
+    background-image: url(/img/footer-arrow_down.png)
+    background-repeat: no-repeat
+    background-position-y: center
 
 .nav_section
   list-style-type: none

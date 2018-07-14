@@ -18,5 +18,15 @@ $(function() {
   $(".my-menu_top-line .toggle-mnu").click(function() {
     mmMenu.close();
     console.log('Check toggle button');
- });
+  });
+
+  $("#accordion").accordion({
+      active: false,
+      collapsible: true
+  })
+  
+  $(".nav_section__title").click(function() {
+    $(this).children("span").toggleClass("nav_section__title-active");
+  })
+
 });
