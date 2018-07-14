@@ -20,13 +20,28 @@ $(function() {
     console.log('Check toggle button');
   });
 
-  $("#accordion").accordion({
+  if ($(window).width() <= '680') {
+    $("#footer_accordion").accordion({
       active: false,
       collapsible: true
-  })
-  
+    });
+  };
+
+  // $(window).resize(function() {
+  //   if ($(window).width() <= '680') {
+  //     $("#footer_accordion").accordion({
+  //       active: false,
+  //       collapsible: true
+  //     });
+  //   } else {
+  //     console.log('afdadsf')
+  //     $( "#footer_accordion" ).accordion().disable;
+  //   };
+  // });
+
+
   $(".nav_section__title").click(function() {
     $(this).children("span").toggleClass("nav_section__title-active");
-  })
+  });
 
 });
