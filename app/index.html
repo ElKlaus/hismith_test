@@ -128,9 +128,9 @@
   <section class="content-section">
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-md-3">
           <div class="sidebar">
-            <nav class="sidebar__menu">
+            <nav class="sidebar__menu d-none d-md-block">
               <ul>
                 <li><a href="#">Документы</a></li>
                 <li><a href="#">План</a></li>
@@ -141,25 +141,27 @@
               </ul>
             </nav>
             <div class="sidebar__mess">
-              <span>Уведомления<div class="count">6</div></span>
+              <span>Уведомления<div class="count">6</div><i class="fas fa-caret-down d-md-none"></i></span>
             </div>
-            <div class="adress-list">
-              <span class="adress-list__title">Адрес 123</span>
-              <div class="adress-list__content">
-                <div class="adress-list__text">Адрес 123</div>
-                <a href="#" class="adress-list__link">Перейти <img src="/img/adress_arrow.png" alt=""></a>
+            <div class="adress-block">
+              <div class="adress-list adress-list_border">
+                <span class="adress-list__title">Адрес 123</span>
+                <div class="adress-list__content">
+                  <div class="adress-list__text">Адрес 123</div>
+                  <a href="#" class="adress-list__link">Перейти <img src="/img/adress_arrow.png" alt=""></a>
+                </div>
               </div>
-            </div>
-            <div class="adress-list">
-              <span class="adress-list__title">Адрес 123</span>
-              <div class="adress-list__content">
-                <div class="adress-list__text">Адрес 123</div>
-                <a href="#" class="adress-list__link">Перейти <img src="/img/adress_arrow.png" alt=""></a>
+              <div class="adress-list">
+                <span class="adress-list__title">Адрес 123</span>
+                <div class="adress-list__content">
+                  <div class="adress-list__text">Адрес 123</div>
+                  <a href="#" class="adress-list__link">Перейти <img src="/img/adress_arrow.png" alt=""></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-12 col-md-9">
           <div class="content-block content-block_border">
             <h2>Уведомления</h2>
             <ul id="content_accordion" class="content-list">
