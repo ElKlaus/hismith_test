@@ -1,5 +1,9 @@
+.content-section
+  padding-top: 25px
+  margin-bottom: 80px
+
 .sidebar
-  padding-top: 30px
+  padding-top: 5px
 
 .sidebar__menu
   ul
@@ -59,27 +63,29 @@
 .adress-list__content
   position: relative
 
-.adress-list__text
-  display: inline-block
-  font-family: vida31Pro, serif
-  font-size: 16px
-  color: #000
+  .adress-list__text
+    display: inline-block
+    font-family: vida31Pro, serif
+    font-size: 16px
+    color: #000
 
-.adress-list__link
-  display: inline-block
-  font-family: vida33Pro, serif
-  font-size: 14px
-  font-weight: bold
-  color: #893b67
-  background-image: url(/img/adress-arrow.png)
-  background-repeat: no-repeat
-  position: absolute
-  right: 0
-  top: 0
-
+  .adress-list__link
+    display: inline-block
+    font-family: vida33Pro, serif
+    font-size: 14px
+    color: #893b67
+    background-image: url(/img/adress-arrow.png)
+    background-repeat: no-repeat
+    position: absolute
+    right: 0
+    top: 2px
+    &:hover
+      text-decoration: none
+    img
+      margin-left: 5px
 
 .content-block
-  padding: 9px 0px 0px 46px
+  padding: 0px 0px 40px 45px
   ul
     margin: 0
     padding: 0
@@ -88,7 +94,11 @@
     font-family: vida33Pro, serif
     font-size: 36px
     color: #414141
-    margin-bottom: 29px
+    line-height: 0.8
+    margin-bottom: 44px
+
+.content-block_border
+  border-left: 1px solid #edeeee
 
 .content-list-item
   border: 1px solid #edeeee
