@@ -80,6 +80,7 @@
     color: #000
     text-decoration: none
     border: none
+    outline: none
   span
     display: none
     height: 10px
@@ -92,7 +93,6 @@
   list-style-type: none
   margin: 0
   padding: 0
-
   .section_item
     width: 100%
     a
@@ -101,5 +101,7 @@
       font-size: 14px
       color: #893b67
       transition: color .25s ease
-      &:hover
+      &:hover, &:focus
         color: darken(#893b67, 20%)
+        outline: none
+      

@@ -51,4 +51,21 @@ $(function() {
     $(this).children("span").toggleClass("nav_section__title-active");
   });
 
+  $('.owl-carousel').owlCarousel({
+    margin:10,
+    loop:true,
+    autoWidth:true,
+    responsive:{
+      0:{
+          items:1
+      },
+      680:{
+          items:1
+      },
+      1000:{
+          items:4
+      }
+    }
+  });
+
 });
