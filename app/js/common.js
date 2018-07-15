@@ -17,28 +17,35 @@ $(function() {
 
   $(".my-menu_top-line .toggle-mnu").click(function() {
     mmMenu.close();
-    console.log('Check toggle button');
+  });
+
+  $("#content_accordion").accordion({
+    active: false,
+    collapsible: true
   });
 
   if ($(window).width() <= '680') {
+    $(".footer__nav_list").attr("id", "footer_accordion")
     $("#footer_accordion").accordion({
       active: false,
       collapsible: true
     });
   };
-
+  
   // $(window).resize(function() {
   //   if ($(window).width() <= '680') {
-  //     $("#footer_accordion").accordion({
-  //       active: false,
-  //       collapsible: true
-  //     });
+  //     $(".footer__nav_list").attr("id", "footer_accordion")
   //   } else {
-  //     console.log('afdadsf')
-  //     $( "#footer_accordion" ).accordion().disable;
+  //     console.log('Check check accordeon');
+  //     $(".footer__nav_list").removeAttr("id", "footer_accordion")
   //   };
   // });
 
+  $(".content-item-title").click(function() {
+    console.log('content item arrow check')
+
+    $(this).children(".article-arrow").toggleClass("article-arrow-active");
+  });
 
   $(".nav_section__title").click(function() {
     $(this).children("span").toggleClass("nav_section__title-active");

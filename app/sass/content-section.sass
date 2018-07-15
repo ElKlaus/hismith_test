@@ -80,20 +80,21 @@
 
 .content-block
   padding: 9px 0px 0px 46px
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
   h2
     font-family: vida33Pro, serif
     font-size: 36px
     color: #414141
     margin-bottom: 29px
 
-.article-block
-  // padding: 2px 0px 0px 24px
-
-.article-content
+.content-list-item
   border: 1px solid #edeeee
-  border-radius: 9px
-  padding: 22px 0px 0px 23px
-  margin-bottom: 52px
+  border-radius: 10px
+  padding: 22px 0 37px 23px
+  margin-bottom: 23px
   position: relative
   .date
     display: inline-block
@@ -108,13 +109,28 @@
     font-size: 18px
     color: #000
     font-weight: bold
+    &:hover
+      cursor: pointer
   p
     font-family: vida33Pro, serif
     font-size: 16px
     color: #5a5a58
 
-.article-arrow, .article-arrow-active
+.article-arrow
   position: absolute
   right: 29px
-  top: 55px
+  top: 58px
+  height: 24px
+  width: 24px
+  background-image: url(/img/arrow_down.png)
+  background-repeat: no-repeat
+  background-position-y: center
+  transition: background-image .25s ease
+  &:hover
+    cursor: pointer
 
+.article-arrow-active
+  background-image: url(/img/arrow_up.png)
+
+.content-item-title
+  outline: none
