@@ -34,9 +34,24 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
-
   .header
     margin-bottom: 45px
+
+  .phone
+    display: inline-block
+
+  .phone_position
+    margin: 0 32px 0 0
+
+  .phone_block
+    display: flex
+    align-items: center
+
+  .toggle-mnu
+    margin: 0
+
+  .top-line__mobile-menu
+    display: inline-block
 
   .header__title-content
     h1
@@ -100,6 +115,9 @@
 
 // ≥680px
 +media-breakpoint-down(xs)
+  .phone_position
+    margin: 0 20px 0 0
+
   .header__title-content
     h1
       font-size: 24px
@@ -132,9 +150,18 @@
   .nav_section__title-active
     transform: rotate(180deg)
 
-@media screen and (max-width: 470px)
-  .test
-    display: inline
+@media screen and (max-width: 520px)
+  .top-line
+    margin-bottom: 30px
+
+  .logo
+    margin-bottom: 10px
+
+  .responsive_phone
+    width: 100%
+
+  .phone_block
+    justify-content: space-between
 
 /*==========  Mobile First  ==========*/
 
