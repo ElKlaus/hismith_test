@@ -19,16 +19,36 @@ $(function() {
     mmMenu.close();
   });
 
+  
+  
+  
+  //========content_accordion========//
   $("#content_accordion").accordion({
     active: false,
-    collapsible: true
+    collapsible: true,
+    heightStyle: "content",
+    activate: function( event, ui ) {
+      ui.oldHeader.children(".article-arrow").removeClass("article-arrow-active");
+      ui.newHeader.children(".article-arrow").addClass("article-arrow-active");
+    }
   });
 
+
+
+  // $(".content-item-title").click(function() {
+  //   $(this).children(".article-arrow").toggleClass("article-arrow-active");
+
+  // });
+  // //========content_accordion end========//
+
+
+
+  //========footer_accordion========//
   if ($(window).width() <= '680') {
     $(".footer__nav_list").attr("id", "footer_accordion")
     $("#footer_accordion").accordion({
       active: false,
-      collapsible: true
+      collapsible: true,
     });
   };
   
@@ -41,15 +61,11 @@ $(function() {
   //   };
   // });
 
-  $(".content-item-title").click(function() {
-    console.log('content item arrow check')
-
-    $(this).children(".article-arrow").toggleClass("article-arrow-active");
-  });
-
   $(".nav_section__title").click(function() {
     $(this).children("span").toggleClass("nav_section__title-active");
   });
+ //========footer_accordion========//
+
 
   $('.owl-carousel').owlCarousel({
     loop:true,
