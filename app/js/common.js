@@ -21,7 +21,6 @@ $(function() {
 
   
   
-  
   //========content_accordion========//
   $("#content_accordion").accordion({
     active: false,
@@ -30,39 +29,31 @@ $(function() {
     activate: function( event, ui ) {
       ui.oldHeader.children(".article-arrow").removeClass("article-arrow-active");
       ui.newHeader.children(".article-arrow").addClass("article-arrow-active");
+      ui.newHeader.parents(".content-list-item").addClass("content-list-item-active");
+      ui.oldHeader.parents(".content-list-item").removeClass("content-list-item-active");
     }
   });
-
-
-
-  // $(".content-item-title").click(function() {
-  //   $(this).children(".article-arrow").toggleClass("article-arrow-active");
-
-  // });
-  // //========content_accordion end========//
+  //========content_accordion end========//
 
 
 
   //========footer_accordion========//
-  if ($(window).width() <= '680') {
-    $(".footer__nav_list").attr("id", "footer_accordion")
-    $("#footer_accordion").accordion({
-      active: false,
-      collapsible: true,
-    });
-  };
-  
-  // $(window).resize(function() {
-  //   if ($(window).width() <= '680') {
-  //     $(".footer__nav_list").attr("id", "footer_accordion")
-  //   } else {
-  //     console.log('Check check accordeon');
-  //     $(".footer__nav_list").removeAttr("id", "footer_accordion")
-  //   };
-  // });
+  const footerAccInit = () => $("#footer_accordion").accordion({
+    active: false,
+    collapsible: true,
+    activate: function( event, ui ) {
+      ui.oldHeader.children("span").removeClass("nav_section__title-active");
+      ui.newHeader.children("span").addClass("nav_section__title-active");
+      ui.oldHeader.closest(".content-list-item").addClass("content-list-item-active");
+    }
+  });
 
-  $(".nav_section__title").click(function() {
-    $(this).children("span").toggleClass("nav_section__title-active");
+  if ($(window).width() <= '680') {
+    footerAccInit();
+  };
+
+  $(window).resize(function() {
+    if ($(this).width() <= '680') footerAccInit();
   });
  //========footer_accordion========//
 
